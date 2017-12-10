@@ -1,0 +1,32 @@
+#particle {
+  position:fixed;
+  top:0;
+  right:0;
+  bottom:0;
+  left:0;
+  z-index:-1;
+}
+
+#title-text
+{
+    font-weight: 900;
+    text-align: center;
+}
+
+#title
+{
+    display: block;
+    margin-top 200px;
+}
+
+
+@media (min-width: 650px)
+{
+  .vertical-line
+  {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    border-width: 0;
+    border-right: 1px solid #E1E1E1;
+  }
+}

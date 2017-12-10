@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>SmartVet - {% block title %}{% endblock %}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Joshua Langley">
+    {% block head %}
+        <link rel="stylesheet" href="../static/css/normalize.css">
+        <link rel="stylesheet" href="../static/css/skeleton.css">
+        <link rel="stylesheet" href="../static/css/common.css">
+        <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+
+        <script type="text/javascript" src="../static/js/jquery.min.js"></script>
+    {% endblock %}
+
+
+  </head>
+
+  <body>
+    <header>
+        {% block header %}
+        {% endblock %}
+    </header>
+    <main role="main">
+        {% block main %}
+        {% endblock %}
+    </main>
+    <footer>
+      {% block footer %}
+      {% endblock %}
+    </footer>
+  </body>
