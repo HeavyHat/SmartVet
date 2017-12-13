@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% block title %}Login{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../static/js/particle_background.js"></script>
+{% endblock %}
+
+{% block main %}
+    <div id="particle">
+    </div>
+    <div class="container">
+        {% include "security/_messages.html" %}
+        <div class="row" id="title">
+            <div class="one column"></div>
+            <div class="five columns" >
+                <h1 class="u-pull-left u-weight-900">Whoops!</h1>
+                <br>
+                <h3 class="u-pull-left">404 - Page not found.</h3>
+            </div>
+            <div class="five columns">
+                <p>Looks like you found a missing page or something. Not entirely sure how you got here, but we have logged it and asked a developer to have a look. We will keep you up to date with the live stream below:</p>
+                <img class="card card-2" src="../static/img/404_cat.gif" alt="Developers hard at work." >
+            </div>
+            <div class="one column"></div>
+        </div>
+        {% include "security/_menu.html" %}
+    </div>
+{% endblock %}

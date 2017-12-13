@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% block title %}Login{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../static/js/particle_background.js"></script>
+  <script src="../static/js/resizeToViewport.js"></script>
+{% endblock %}
+
+{% block main %}
+    <div id="viewport">
+        <div class="content">
+
+            <div class="row u-full-height">
+                <div class="three columns u-full-height vertical-line">
+                    <nav>
+
+                    </nav>
+                </div>
+                <div class="u-full-height u-full-width" id="dash-view">
+
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+

@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% from "security/_macros.html" import render_field_with_errors, render_field %}
+{% block title %}Register{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script src="../static/js/particle_background.js"></script>
+<script src="../static/js/resizeToViewport.js"></script>
+{% endblock %}
+
+{% block main %}
+    <div id="particle">
+    </div>
+    <div class="container">
+        <div class="row" id="title">
+            <div class="one column"></div>
+            <div class="five columns vertical-line" ><h1 id="title-text">Register</h1></div>
+            <div class="five columns auth-form">
+                <form class="twelve columns" action="{{ url_for_security('register') }}" method="POST" name="register_user_form">
+                    {{ register_user_form.hidden_tag() }}
+                      {{ render_field_with_errors(register_user_form.email) }}
+                      {{ render_field_with_errors(register_user_form.password) }}
+                      {{ render_field_with_errors(register_user_form.first_name) }}
+                      {{ render_field_with_errors(register_user_form.last_name) }}
+                      {{ render_field_with_errors(register_user_form.practice) }}
+                      {{ render_field_with_errors(register_user_form.location) }}
+                      {{ render_field_with_errors(register_user_form.howDidYouHear) }}
+                      {{ render_field(register_user_form.next) }}
+                    {{ render_field(register_user_form.submit) }}
+                </form>
+            </div>
+            <div class="one column"></div>
+        </div>
+    </div>
+{% endblock %}
